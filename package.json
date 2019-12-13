@@ -1,0 +1,15 @@
+{
+  "name": "jfactory-starter-kit",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "jfactory-es": "^1.0.0-beta.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "scripts": {
+    "start": "node node_modules/.bin/webpack-dev-server"
+  }
+}
