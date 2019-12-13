@@ -1,16 +1,23 @@
-// Starter Kit for jFactory
-// (the server must be reloaded after modifications)
+/*
+ * Starter Kit for jFactory
+ * The server must be reloaded after modifications in this file
+ */
 
 const webpack = require("webpack");
 
+// NODE_ENV
 // ----------------------------------------------------------------------------
-// Force the NODE_ENV for the demonstration (but you can use external ENV)
-// ----------------------------------------------------------------------------
+// The NODE_ENV is used by "jfactory-es" to automatically select the module
+// (for the demonstration we force the NODE_ENV but you can set it externally)
 
-process.env.NODE_ENV = "development"; // enable jFactory developer mode
-// process.env.NODE_ENV = "production"; // disable jFactory developer mode
+process.env.NODE_ENV = "development"; // selects the jFactory developer module
+// process.env.NODE_ENV = "production"; // selects the jFactory production mode
 
-// ----------------------------------------------------------------------------
+// Alternatively, instead of importing "jfactory-es", you can ignore the
+// NODE_ENV and manually import the distribution you want
+// ex: import {jFactory} form "jfactory-es/dist/jFactory-devel.mjs"
+// ex: import {jFactory} form "jfactory-es/dist/jFactory.mjs"
+
 // Webpack Config
 // ----------------------------------------------------------------------------
 

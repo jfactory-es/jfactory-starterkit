@@ -19,7 +19,7 @@ then open:
     http://localhost:8080
 
 You must see jFactory logs in console if you are in developer mode.
-Now you can edit app.js as you wish, the page will be auto updated
+Now you can edit app.js as you wish, the page will be auto updated.
 
 See also
 --------
