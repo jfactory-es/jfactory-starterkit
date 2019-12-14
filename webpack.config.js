@@ -10,13 +10,13 @@ const webpack = require("webpack");
 // The NODE_ENV is used by "jfactory-es" to automatically select the module
 // (for the demonstration we force the NODE_ENV but you can set it externally)
 
-process.env.NODE_ENV = "development"; // selects the jFactory developer module
-// process.env.NODE_ENV = "production"; // selects the jFactory production mode
-
 // Alternatively, instead of importing "jfactory-es", you can ignore the
 // NODE_ENV and manually import the distribution you want
-// ex: import {jFactory} form "jfactory-es/dist/jFactory-devel.mjs"
-// ex: import {jFactory} form "jfactory-es/dist/jFactory.mjs"
+// ex: import { jFactory } form "jfactory-es/dist/jFactory-devel.mjs"
+// ex: import { jFactory } form "jfactory-es/dist/jFactory.mjs"
+
+process.env.NODE_ENV = "development"; // selects the jFactory developer module
+// process.env.NODE_ENV = "production"; // selects the jFactory production mode
 
 // Webpack Config
 // ----------------------------------------------------------------------------
@@ -39,5 +39,6 @@ module.exports = {
   // See https://webpack.js.org/configuration/dev-server/
   devServer: {
     // host: '0.0.0.0',
+    clientLogLevel: "silent"
   }
 };
