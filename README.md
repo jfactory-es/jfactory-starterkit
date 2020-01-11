@@ -1,6 +1,6 @@
 # jFactory Starter Kit
 
-A simple demonstration running on a [webpack dev-server](https://webpack.js.org/configuration/dev-server/)
+A simple demonstration running on [webpack](https://webpack.js.org/configuration/dev-server/)
  to quickly test jFactory.
 
 ## Installation
@@ -10,7 +10,7 @@ Clone this repository:
 git clone https://github.com/jfactory-es/jfactory-starterkit.git
 ```
 
-## Starting the server
+## Starting the webpack DevServer
 
 ```
 npm run start
