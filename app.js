@@ -1,10 +1,16 @@
+// If bundled by webpack:
 import $ from "jquery";
 import { jFactory } from "jfactory-es";
 
+// If not bundled by webpack:
+// Uncomment the <script> in the html file, and this line:
+// const { jFactory } = jFactoryModule;
+
 let clockComponent = jFactory("clockComponent", {
+
     onInstall() {
         this.$log("install");
-        this.$cssFetch("#clock-css", "app-clock.css");
+        this.$cssFetch("#clock-css", "app-clock.css").then(() => this.updateView("installed but not enabled"));
         this.view = this.$dom("#clock-view", "<div>").appendTo("body");
     },
 
