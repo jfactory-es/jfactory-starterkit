@@ -10,8 +10,8 @@ let clockComponent = jFactory("clockComponent", {
 
     onInstall() {
         this.$log("install");
-        this.$cssFetch("#clock-css", "app-clock.css").then(() => this.updateView("installed but not enabled"));
         this.view = this.$dom("#clock-view", "<div>").appendTo("body");
+        this.$cssFetch("#clock-css", "app-clock.css").then(() => this.updateView("installed but not enabled"));
     },
 
     async onEnable() {
