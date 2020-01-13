@@ -1,6 +1,6 @@
 # jFactory Starter Kit
 
-A small application that demonstrates how easily you can stop all assynchronous works in a single method call.
+A small application that demonstrates how easily you can stop all the assynchronous works of a component.
 
 jFactory documentation:
 https://github.com/jfactory-es/jfactory/blob/master/doc/ref-index.md
@@ -27,5 +27,6 @@ http://localhost:8080
 
 ## Without Webpack
 
-If you don't want to bundle the application, you can edit index.html to uncomment the external imports, then edit app.js to use the umd module.
-You may need a local server because fetch disallows local access (alternatively you can retarget the fetch urls to external sources)
+If you prefer to run this application without webpack, uncomment the scripts in the index.html and edit the app.js as explained in comments.
+
+Because fetch() does not allow local urls, you may need to re-target their urls to something external, or load the application from your own local server.
