@@ -38,8 +38,8 @@ let clockComponent = jFactory("clockComponent", {
     },
 
     fetchDate() {
-        return this.$fetchJSON("worldclockapi", "http://worldclockapi.com/api/json/utc/now")
-            .then(v => new Date(v.currentDateTime))
+        return this.$fetchJSON("worldtimeapi", "//worldtimeapi.org/api/ip")
+            .then(v => new Date(v.utc_datetime))
     }
 });
 
