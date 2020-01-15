@@ -14,10 +14,10 @@ git clone https://github.com/jfactory-es/jfactory-starterkit.git
 
 ## Using the Webpack DevServer
 
-To quickly run this kit, the included [webpack local server](https://webpack.js.org/configuration/dev-server/) allows you to auto-reload app.js after edition.
+This kit includes a local [webpack local server](https://webpack.js.org/configuration/dev-server/) to test jFactory effortlessly. 
 
 ```
-npm run start
+npm run dev
 ```
 
 Open in a browser:

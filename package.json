@@ -11,6 +11,6 @@
     "webpack-dev-server": "^3.9.0"
   },
   "scripts": {
-    "start": "node node_modules/.bin/webpack-dev-server"
+    "dev": "node node_modules/.bin/webpack-dev-server"
   }
 }
