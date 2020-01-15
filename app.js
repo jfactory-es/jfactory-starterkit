@@ -1,9 +1,21 @@
-// If bundled by webpack:
+// ----------------------------------------------------------------------------
+// If bundled by webpack
+// ----------------------------------------------------------------------------
 import $ from "jquery";
 import { jFactory } from "jfactory-es";
 
-// If not bundled by webpack:
-// Uncomment the <script> in the html file, and this line:
+// The "jfactory-es" module uses "process.env.NODE_ENV" to automatically
+// switch between "production" and "development". Note that webpack injects
+// NODE_ENV with a value equal to its "mode" option, so you shouldn't need to set
+// process.env.NODE_ENV.
+
+// Alternatively, you can force the module you want:
+// ex: import { jFactory } form "jfactory-es/dist/jFactory-devel.mjs"
+// ex: import { jFactory } form "jfactory-es/dist/jFactory.mjs"
+
+// ----------------------------------------------------------------------------
+// If not bundled by webpack (uncomment the script imports in the html file):
+// ----------------------------------------------------------------------------
 // const { jFactory } = jFactoryModule;
 
 let clockComponent = jFactory("clockComponent", {
