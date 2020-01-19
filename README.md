@@ -14,7 +14,7 @@ git clone https://github.com/jfactory-es/jfactory-starterkit.git
 
 ## Using the Webpack DevServer
 
-This kit includes a local [webpack local server](https://webpack.js.org/configuration/dev-server/) to test jFactory effortlessly. 
+This kit includes a [webpack local server](https://webpack.js.org/configuration/dev-server/) to test jFactory effortlessly. 
 
 ```
 npm run dev
@@ -29,4 +29,4 @@ http://localhost:8080
 
 If you prefer to run this application without webpack, uncomment the scripts in the index.html and edit the app.js as explained in comments.
 
-Because fetch() does not allow local urls, you may need to re-target their urls to something external, or load the application from your own local server.
+Because fetch() does not allow local paths, you may need to re-target their urls to something external, or load the application from your own local server.
