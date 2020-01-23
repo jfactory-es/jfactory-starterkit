@@ -44,6 +44,8 @@ window.clockComponent = jFactory("clockComponent", {
         // is automatically stopped and removed
     },
 
+    // your own methods...
+
     update(value) {
         this.data.message = value
     },

@@ -31,6 +31,8 @@ window.clockComponent = jFactory("clockComponent", {
         // is automatically stopped and removed
     },
 
+    // your own methods...
+
     updateView(value) {
         this.view.html(value)
     },
