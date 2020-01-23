@@ -1,16 +1,22 @@
 {
   "name": "jfactory-starter-kit",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "private": true,
+  "//": {
+    "jfactory-es": "file:../jFactory_1/workspace/"
+  },
   "dependencies": {
-    "jfactory-es": "^1.1.1"
+    "jfactory-es": "latest",
+    "vue": "^2.6.11",
+    "jquery": "^3.4.1"
   },
   "devDependencies": {
-    "webpack": "^4.41.2",
+    "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.9.0"
+    "webpack-dev-server": "^3.10.1"
   },
   "scripts": {
-    "dev": "node node_modules/.bin/webpack-dev-server"
+    "vanilla": "node node_modules/.bin/webpack-dev-server --config ./kit-vanilla/webpack.config.js",
+    "vuejs": "node node_modules/.bin/webpack-dev-server --config ./kit-vuejs/webpack.config.js"
   }
 }

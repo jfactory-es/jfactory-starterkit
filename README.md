@@ -1,32 +1,32 @@
 # jFactory Starter Kit
 
-A small application that demonstrates how easily you can stop all the assynchronous works of a component.
+This small component demonstrates how to automatically stop and remove all views, queries, promise chains, timers, css and dom, in a single command, using [jFactory](https://github.com/jfactory-es/jfactory).
 
-jFactory documentation:
-https://github.com/jfactory-es/jfactory/blob/master/doc/ref-index.md
+See also [CodePen Playground](https://github.com/jfactory-es/jfactory/blob/master/docs/index-playground.md) 
+if your are looking for a starter kit that uses an umd package loaded from a script tag.
 
 ## Installation
 
-Clone this repository:
 ```
 git clone https://github.com/jfactory-es/jfactory-starterkit.git
 ```
 
-## Using the Webpack DevServer
+## Run
 
-This kit includes a [webpack local server](https://webpack.js.org/configuration/dev-server/) to test jFactory effortlessly. 
+This kit includes a [webpack](https://webpack.js.org/configuration/dev-server/) local server to run jFactory effortlessly. 
+
+Choose the version you want to run:
 
 ```
-npm run dev
+npm run vanilla
+npm run vuejs
 ```
 
 Open in a browser:
 ```
 http://localhost:8080
 ```
+## See also
 
-## Without Webpack
-
-If you prefer to run this application without webpack, uncomment the scripts in the index.html and edit the app.js as explained in comments.
-
-Because fetch() does not allow local paths, you may need to re-target their urls to something external, or load the application from your own local server.
+* [jFactory documentation](https://github.com/jfactory-es/jfactory/blob/master/doc/ref-index.md)
+* [CodePen Playground](https://github.com/jfactory-es/jfactory/blob/master/docs/index-playground.md)

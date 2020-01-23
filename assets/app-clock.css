@@ -1,0 +1,8 @@
+#clock-view {
+    width: 300px;
+    height: 100px;
+    overflow: hidden;
+    border: 2px dashed #448ad8;
+    margin-top: 10px;
+    display:flex;justify-content:center;align-items:center;
+}

@@ -3,23 +3,20 @@
 <head>
     <meta charset="utf-8"/>
     <title>jFactory Starter Kit</title>
-
-    <!-- if not compiled by webpack, uncomment this
-    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/jfactory-es/jfactory/dist/jFactory-devel.umd.js"></script>
-    -->
     <script src="app.js"></script>
 </head>
 <body>
 
     <h1>The Inaccurate Clock Component</h1>
-    <p><a href="https://github.com/jfactory-es/jfactory/blob/master/doc/ref-index.md">jFactory documentation</a></p>
+    <p>This small component demonstrates how to automatically stop and remove all queries, promise chains, timers, css and dom, in a single command, using <a target="_blank" href="https://github.com/jfactory-es/jfactory">jFactory</a></p>
+    <a target="_blank" href="https://github.com/jfactory-es/jfactory/blob/master/docs/ref-index.md">Documentation</a></p>
 
-    <button id="install">install</button>
-    <button id="enable">enable</button>
-    <button id="disable">disable</button>
-    <button id="uninstall">uninstall</button>
+    <button id="install" onclick="clockComponent.$install()">install</button>
+    <button id="enable" onclick="clockComponent.$enable()">enable</button>
+    <button id="disable" onclick="clockComponent.$disable()">disable</button>
+    <button id="uninstall" onclick="clockComponent.$uninstall()">uninstall</button>
+
+    <template id="tpl-clockVue"><div>{{message}}</div></template>
 
 </body>
 </html>
