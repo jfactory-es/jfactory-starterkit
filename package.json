@@ -11,12 +11,18 @@
     "jquery": "^3.4.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.10.1"
   },
   "scripts": {
     "vanilla": "node node_modules/.bin/webpack-dev-server --config ./kit-vanilla/webpack.config.js",
-    "vuejs": "node node_modules/.bin/webpack-dev-server --config ./kit-vuejs/webpack.config.js"
+    "vuejs": "node node_modules/.bin/webpack-dev-server --config ./kit-vuejs/webpack.config.js",
+    "react": "node node_modules/.bin/webpack-dev-server --config ./kit-react/webpack.config.js"
   }
 }
