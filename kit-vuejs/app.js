@@ -1,23 +1,27 @@
-import { jFactory } from "jfactory-es";
+import { jFactory } from "jfactory";
 import Vue from "vue/dist/vue.common";
 
-window.clockComponent = jFactory("clockComponent", {
+window.clock = jFactory("clock", {
 
     async onInstall() {
         this.$log("install");
 
-        await this.$cssFetch("#clock-css", "assets/app-clock.css");
+        // Load a css and register it as "clockCss"
+        // see https://github.com/jfactory-es/jfactory/blob/master/docs/TraitCSS.md
+        await this.$cssFetch("clockCss", "assets/clock.css");
 
-        // Create a DOM target for the view
-        // using an existing <template>
-        this.$dom("#clock-view", "#tpl-clockVue", "body");
+        // Register a DOM target as "clockDom" with dom id "#clockDom" and append it to "body"
+        // see https://github.com/jfactory-es/jfactory/blob/master/docs/TraitDOM.md
+        // Clone it from a declared <template> (see index.html file)
+        this.$dom("#clockDom", "#tpl-vue", "body");
         // or create it
-        // this.$dom("#clock-view", '<div>{{message}}</div>', "body");
+        // this.$dom("#clockDom", '<div class="clock">{{message}}</div>', "body");
         // or load it
-        // await this.$domFetch("#clock-view", "../assets/app-clock.tpl.html", "body");
+        // await this.$domFetch("#clockDom", "../assets/tpl-vue.html", "body",);
 
-        this.data = {message: ""};
-        this.$vue("myView", new Vue({el: "#clock-view", data: this.data}));
+        this.data = { message: "" };
+        this.$vue("myVue", new Vue({el: "#clockDom", data: this.data}));
+
         this.update("Installed but not enabled");
     },
 

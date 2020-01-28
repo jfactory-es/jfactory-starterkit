@@ -21,6 +21,7 @@ Choose the version you want to run:
 npm run vanilla
 npm run vuejs
 npm run react
+npm run webcomponent
 ```
 
 Open in a browser:
@@ -30,4 +31,4 @@ http://localhost:8080
 ## See also
 
 * [jFactory documentation](https://github.com/jfactory-es/jfactory/blob/master/doc/ref-index.md)
-* [CodePen Playground](https://github.com/jfactory-es/jfactory/blob/master/docs/index-playground.md)
+* [CodePen Playground](https://github.com/jfactory-es/jfactory/blob/master/docs/playground/README.md)

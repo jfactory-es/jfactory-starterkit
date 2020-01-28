@@ -1,14 +1,14 @@
-import { jFactory } from "jfactory-es";
+import { jFactory } from "jfactory";
 import React, { Component } from 'react';
 import ReactDOM from "react-dom";
 
 jFactory.ReactDOM = ReactDOM;
 
-window.clockComponent = jFactory("clockComponent", {
+window.clock = jFactory("clock", {
 
     async onInstall() {
 
-        class Timer extends Component {
+        class Clock extends Component {
             constructor(props) {
                 super(props);
                 this.state = { message: "" };
@@ -17,9 +17,21 @@ window.clockComponent = jFactory("clockComponent", {
         }
 
         this.$log("install");
-        await this.$cssFetch("#clock-css", "assets/app-clock.css");
-        let container = this.$dom("#clock-view", '<div/>', "body");
-        this.view = this.$react("myView", container, <Timer />);
+
+        // Load a css and register it as "clockCss"
+        // see https://github.com/jfactory-es/jfactory/blob/master/docs/TraitCSS.md
+        await this.$cssFetch("clockCss", "assets/clock.css");
+
+        // Register a DOM target as "clockDom" and append it to "body"
+        // see https://github.com/jfactory-es/jfactory/blob/master/docs/TraitDOM.md
+        // Clone it from a declared <template> (see index.html file)
+        let clockDom = this.$dom("clockDom", "#tpl-vanilla", "body");
+        // or create it
+        // let clockDom = this.$dom("clockDom", "<div class='clock'/>", "body");
+        // or load it
+        // let clockDom = await this.$domFetch("clockDom", "../assets/tpl-vanilla.html", "body",);
+        this.view = this.$react("myView", clockDom, <Clock />);
+
         this.update("Installed but not enabled");
     },
 

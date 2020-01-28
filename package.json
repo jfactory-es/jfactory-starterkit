@@ -3,10 +3,10 @@
   "version": "1.2.0",
   "private": true,
   "//": {
-    "jfactory-es": "file:../jFactory_1/workspace/"
+    "jfactory": "file:../jFactory_1/workspace/"
   },
   "dependencies": {
-    "jfactory-es": "latest",
+    "jfactory": "latest",
     "vue": "^2.6.11",
     "jquery": "^3.4.1"
   },
@@ -23,6 +23,7 @@
   "scripts": {
     "vanilla": "node node_modules/.bin/webpack-dev-server --config ./kit-vanilla/webpack.config.js",
     "vuejs": "node node_modules/.bin/webpack-dev-server --config ./kit-vuejs/webpack.config.js",
-    "react": "node node_modules/.bin/webpack-dev-server --config ./kit-react/webpack.config.js"
+    "react": "node node_modules/.bin/webpack-dev-server --config ./kit-react/webpack.config.js",
+    "webcomponent": "node node_modules/.bin/webpack-dev-server --config ./kit-webcomponent/webpack.config.js"
   }
 }
