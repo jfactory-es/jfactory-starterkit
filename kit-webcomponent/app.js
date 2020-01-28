@@ -7,7 +7,7 @@ class ClockComponent extends HTMLElement {
         super();
 
         // Inject jFactory Traits using shortcuts
-        // see https://github.com/jfactory-es/jfactory/blob/master/src/jFactory.mjs
+        // see https://github.com/jfactory-es/jfactory/blob/master/docs/ref-components.md
         JFactoryCoreObject.inject(this, ClockComponent, this.getAttribute("name"));
         JFactoryComponent.inject(this, ClockComponent);
 
