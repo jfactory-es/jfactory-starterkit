@@ -19,7 +19,7 @@ Choose the version you want to run:
 
 ```
 npm run vanilla
-npm run vuejs
+npm run vue
 npm run react
 npm run webcomp
 ```

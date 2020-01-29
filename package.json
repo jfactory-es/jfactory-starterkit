@@ -23,7 +23,7 @@
   "scripts": {
     "react": "node scripts/wds.js react",
     "vanilla": "node scripts/wds.js vanilla",
-    "vuejs": "node scripts/wds.js vuejs",
+    "vue": "node scripts/wds.js vue",
     "webcomp": "node scripts/wds.js webcomp"
   }
 }
