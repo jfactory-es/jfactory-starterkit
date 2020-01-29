@@ -1,26 +1,36 @@
 import { jFactory } from "jfactory";
-import Vue from "vue/dist/vue.common";
+import React, { Component } from 'react';
+import ReactDOM from "react-dom";
+
+jFactory.ReactDOM = ReactDOM;
 
 window.clock = jFactory("clock", {
 
     async onInstall() {
+
+        class Clock extends Component {
+            constructor(props) {
+                super(props);
+                this.state = { message: "" };
+            }
+            render() {return this.state.message}
+        }
+
         this.$log("install");
 
         // Load a css and register it as "clockCss"
         // see https://github.com/jfactory-es/jfactory/blob/master/docs/TraitCSS.md
         await this.$cssFetch("clockCss", "assets/clock.css");
 
-        // Register a DOM target as "clockDom" with dom id "#clockDom" and append it to "body"
+        // Register a DOM target as "clockDom" and append it to "body"
         // see https://github.com/jfactory-es/jfactory/blob/master/docs/TraitDOM.md
         // Clone it from a declared <template> (see index.html file)
-        this.$dom("#clockDom", "#tpl-vue", "body");
+        let clockDom = this.$dom("clockDom", "#tpl-clock", "body");
         // or create it
-        // this.$dom("#clockDom", '<div class="clock">{{message}}</div>', "body");
+        // let clockDom = this.$dom("clockDom", "<div class='clock'/>", "body");
         // or load it
-        // await this.$domFetch("#clockDom", "../assets/tpl-vue.html", "body",);
-
-        this.data = { message: "" };
-        this.$vue("myVue", new Vue({el: "#clockDom", data: this.data}));
+        // let clockDom = await this.$domFetch("clockDom", "../assets/template.html", "body",);
+        this.view = this.$react("myView", clockDom, <Clock />);
 
         this.update("Installed but not enabled");
     },
@@ -51,7 +61,7 @@ window.clock = jFactory("clock", {
     // your own methods...
 
     update(value) {
-        this.data.message = value
+        this.view.setState({message: value});
     },
 
     fetchDate() {

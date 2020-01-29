@@ -21,7 +21,7 @@ Choose the version you want to run:
 npm run vanilla
 npm run vuejs
 npm run react
-npm run webcomponent
+npm run webcomp
 ```
 
 Open in a browser:

@@ -1,21 +1,8 @@
 import { jFactory } from "jfactory";
-import React, { Component } from 'react';
-import ReactDOM from "react-dom";
-
-jFactory.ReactDOM = ReactDOM;
 
 window.clock = jFactory("clock", {
 
     async onInstall() {
-
-        class Clock extends Component {
-            constructor(props) {
-                super(props);
-                this.state = { message: "" };
-            }
-            render() {return this.state.message}
-        }
-
         this.$log("install");
 
         // Load a css and register it as "clockCss"
@@ -25,43 +12,42 @@ window.clock = jFactory("clock", {
         // Register a DOM target as "clockDom" and append it to "body"
         // see https://github.com/jfactory-es/jfactory/blob/master/docs/TraitDOM.md
         // Clone it from a declared <template> (see index.html file)
-        let clockDom = this.$dom("clockDom", "#tpl-vanilla", "body");
+        this.view = this.$dom("clockDom", "#tpl-clock", "body");
         // or create it
-        // let clockDom = this.$dom("clockDom", "<div class='clock'/>", "body");
+        // this.view = this.$dom("clockDom", "<div class='clock'/>", "body");
         // or load it
-        // let clockDom = await this.$domFetch("clockDom", "../assets/tpl-vanilla.html", "body",);
-        this.view = this.$react("myView", clockDom, <Clock />);
+        // this.view = await this.$domFetch("clockDom", "../assets/template.html", "body",);
 
-        this.update("Installed but not enabled");
+        this.updateView("Installed but not enabled");
     },
 
     async onEnable() {
         this.$log("enable");
-        this.update("Fetching...");
+        this.updateView("Fetching...");
         this.date = await this.fetchDate();
         this.$interval("update", 1000, () => {
             this.date = new Date(this.date.setSeconds(this.date.getSeconds() + 1));
-            this.update(this.date.toLocaleString())
+            this.updateView(this.date.toLocaleString())
         })
     },
 
     onDisable() {
         this.$log("disable");
-        this.update("Disabled");
-        // Everything installed by and after onEnable
+        this.updateView("Disabled");
+        // everything installed by and after onEnable
         // is automatically stopped and removed
     },
 
     onUninstall() {
         this.$log("uninstall");
-        // Everything installed by onInstall
+        // everything installed by onInstall
         // is automatically stopped and removed
     },
 
     // your own methods...
 
-    update(value) {
-        this.view.setState({message: value});
+    updateView(value) {
+        this.view.html(value)
     },
 
     fetchDate() {

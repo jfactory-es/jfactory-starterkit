@@ -1,6 +1,6 @@
 {
   "name": "jfactory-starter-kit",
-  "version": "1.2.0",
+  "version": "1.4.0",
   "private": true,
   "//": {
     "jfactory": "file:../jFactory_1/workspace/"
@@ -21,9 +21,9 @@
     "webpack-dev-server": "^3.10.1"
   },
   "scripts": {
-    "vanilla": "node node_modules/.bin/webpack-dev-server --config ./kit-vanilla/webpack.config.js",
-    "vuejs": "node node_modules/.bin/webpack-dev-server --config ./kit-vuejs/webpack.config.js",
-    "react": "node node_modules/.bin/webpack-dev-server --config ./kit-react/webpack.config.js",
-    "webcomponent": "node node_modules/.bin/webpack-dev-server --config ./kit-webcomponent/webpack.config.js"
+    "react": "node scripts/wds.js react",
+    "vanilla": "node scripts/wds.js vanilla",
+    "vuejs": "node scripts/wds.js vuejs",
+    "webcomp": "node scripts/wds.js webcomp"
   }
 }
