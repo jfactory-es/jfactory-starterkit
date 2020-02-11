@@ -6,8 +6,6 @@ window.app = {};
 
 const REQUEST_DELAY = 2000;
 
-let wait = x => new Promise(r => setTimeout(r, x));
-
 app.mainComponent = jFactory("main", {
 
     async onInstall() {
