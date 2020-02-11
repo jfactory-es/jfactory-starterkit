@@ -1,0 +1,21 @@
+.clock {
+    width: 200px;
+    padding: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    border: 2px dashed #448ad8;
+    /*margin-top: 10px;*/
+}
+
+.clock-view {
+    margin-bottom: 10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.clock-bts {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}

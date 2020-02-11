@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <script src="app.js"></script>
+</head>
+<body>
+
+    <div id="root">
+        <button id="root-bt-install">Install Main Component</button>
+        <button id="root-bt-uninstall">Uninstall Main Component</button>
+    </div>
+
+    <template id="tpl-main">
+        <div id="main">
+            <div id="main-title">Main Component</div>
+            <button id="main-bt-enable">enable</button>
+            <button id="main-bt-disable">disable</button>
+            <button id="main-bt-add">add Clock Component</button>
+            <div id="main-clocks"></div>
+        </div>
+    </template>
+
+    <template id="tpl-clock">
+        <div class="clock">
+            <div class="clock-view"></div>
+            <div class="clock-bts">
+                <button class="clock-bt-enable">enable</button>
+                <button class="clock-bt-disable">disable</button>
+                <button class="clock-bt-remove">remove</button>
+            </div>
+        </div>
+    </template>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+#main {
+    display: inline-block;
+    min-width: 400px;
+    margin: 10px 0;
+    padding: 10px 0 10px 10px;
+    border: 1px solid black;
+}
+
+#main-title {
+    margin-bottom: 10px;
+}
+
+#main-clocks {
+    display: flex;
+    flex-wrap: wrap;
+}

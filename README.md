@@ -18,6 +18,7 @@ This kit includes a [webpack](https://webpack.js.org/configuration/dev-server/) 
 Choose the version you want to run:
 
 ```
+npm run class
 npm run vanilla
 npm run vue
 npm run react
