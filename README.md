@@ -13,7 +13,7 @@ git clone https://github.com/jfactory-es/jfactory-starterkit.git
 
 ## Run
 
-This kit includes a [webpack](https://webpack.js.org/configuration/dev-server/) local server to run jFactory effortlessly. 
+This kit includes a [webpack local server](https://webpack.js.org/configuration/dev-server/) to run jFactory effortlessly. 
 
 Choose the version you want to run:
 
@@ -31,5 +31,5 @@ http://localhost:8080
 ```
 ## See also
 
-* [jFactory documentation](https://github.com/jfactory-es/jfactory/blob/master/doc/ref-index.md)
+* [jFactory documentation](https://github.com/jfactory-es/jfactory/blob/master/docs/ref-index.md)
 * [Playground](https://github.com/jfactory-es/jfactory/blob/master/docs/playground/README.md)

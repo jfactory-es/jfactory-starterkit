@@ -4,7 +4,6 @@ const wds = require("webpack-dev-server");
 const args = process.argv.slice(2);
 try {
     process.chdir('./kit/' + args[0]);
-    console.log('New directory: ' + process.cwd());
 }
 catch (err) {
     console.log('wrong argument');
