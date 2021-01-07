@@ -1,4 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 const PRODUCTION = process.env.NODE_ENV === "production";
 
 module.exports = {
@@ -11,11 +13,17 @@ module.exports = {
   },
 
   plugins: [
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "./app.html",
       title: "App",
       inject: "body"
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: "./assets", to: "assets" },
+      ],
     })
   ],
 

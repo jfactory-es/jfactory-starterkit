@@ -17,9 +17,7 @@ module.exports = {
   },
 
   plugins: [
-    new CleanWebpackPlugin({
-      dry: true
-    }),
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "./app.html",
@@ -30,7 +28,7 @@ module.exports = {
       patterns: [
         { from: "./assets", to: "assets" },
       ],
-    }),
+    })
   ],
 
   // See https://webpack.js.org/configuration/dev-server/
@@ -41,6 +39,6 @@ module.exports = {
     stats: "errors-only",
     hot: false,
     liveReload: true,
-    publicPath: "/dist"
+    publicPath: "/"
   }
 };
