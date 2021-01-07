@@ -10,11 +10,7 @@
 >See also the [Playground](https://github.com/jfactory-es/jfactory/blob/master/docs/playground/README.md) 
 > if your are looking for immediate testing.
 
-<!--
-This small component demonstrates how to automatically stop and remove all views, queries, promise chains, timers, css and dom, in a single command, using [jFactory](https://github.com/jfactory-es/jfactory).
--->
-
-This starter kit provides small applications preconfigured for react, vuejs, dom template and web components. 
+This starter kit provides small jFactory applications preconfigured for react, vuejs, dom template and web components. 
 There is also a demonstration of instantiable jFactory components. 
 
 ## Installation
@@ -43,6 +39,31 @@ Open in a browser:
 ```
 http://localhost:8080
 ```
+
+> By default a Webpack DevServer doesn't write the output on disk. If you want to change this,
+> see [devServer.writeToDisk](https://webpack.js.org/configuration/dev-server/#devserverwritetodisk-).
+
+## Build an app
+
+>Additionally, the Start Kit provides a production build tool to compile your application (using webpack).
+
+Choose the kit you want to build:
+
+```
+npm run build-dom
+npm run build-react
+npm run build-vue
+npm run build-webc
+npm run build-demo
+```
+
+Output dir:
+```
+./kit/[kit_name]/dist
+```
+
+>It is possible to test the compiled version in browser if the DevServer of the same kit is running, by adding "/dist" to the url: http://localhost:8080/dist/   
+
 ## See also
 
 * [jFactory documentation](https://github.com/jfactory-es/jfactory/blob/master/docs/ref-index.md)
