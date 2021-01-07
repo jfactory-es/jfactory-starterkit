@@ -1,21 +1,36 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
+const PRODUCTION = process.env.NODE_ENV === "production";
 
 module.exports = {
 
-  mode: "development",
-  devtool: "inline-source-map",
+  mode: process.env.NODE_ENV,
+  devtool: PRODUCTION ? false : "inline-source-map",
 
   entry: {
     app: "./app.js"
   },
 
+  output: {
+    path: __dirname + '/dist',
+  },
+
   plugins: [
+    new CleanWebpackPlugin({
+      dry: true
+    }),
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "./app.html",
       title: "App",
       inject: "body"
-    })
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: "./assets", to: "assets" },
+      ],
+    }),
   ],
 
   // See https://webpack.js.org/configuration/dev-server/
@@ -26,6 +41,6 @@ module.exports = {
     stats: "errors-only",
     hot: false,
     liveReload: true,
-    publicPath: "/"
+    publicPath: "/dist"
   }
 };

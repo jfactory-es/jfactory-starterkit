@@ -12,10 +12,13 @@ catch (err) {
     process.exit();
 }
 
-console.log('Starting DevServer for ' + '"'+ args[0] + '"\n');
-
+process.env.NODE_ENV = "development";
 const CONF_WEBPACK = require("../kit/"+args[0]+"/webpack.config.js");
 const CONF_SERVER = CONF_WEBPACK.devServer;
+
+console.log('Starting DevServer for ' + '"'+ args[0] + '"');
+console.log('Webpack mode = ' + '"' + CONF_WEBPACK.mode + '"');
+console.log();
 
 const server = new wds(webpack(CONF_WEBPACK), CONF_SERVER);
 server.listen(CONF_SERVER.port, CONF_SERVER.host);

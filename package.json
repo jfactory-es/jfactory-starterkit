@@ -11,6 +11,8 @@
     "@babel/core": "^7.12.10",
     "@babel/preset-react": "^7.12.10",
     "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^7.0.0",
     "html-webpack-plugin": "^5.0.0-beta.4",
     "jfactory": "^1.7.4",
     "react": "^17.0.1",
@@ -24,6 +26,11 @@
     "dev-react": "node scripts/wds.js react",
     "dev-vue": "node scripts/wds.js vue",
     "dev-webc": "node scripts/wds.js webc",
-    "dev-demo": "node scripts/wds.js demo"
+    "dev-demo": "node scripts/wds.js demo",
+    "build-dom": "node scripts/build.js dom",
+    "build-react": "node scripts/build.js react",
+    "build-vue": "node scripts/build.js vue",
+    "build-webc": "node scripts/build.js webc",
+    "build-demo": "node scripts/build.js demo"
   }
 }

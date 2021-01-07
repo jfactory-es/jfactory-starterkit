@@ -1,9 +1,10 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const PRODUCTION = process.env.NODE_ENV === "production";
 
 module.exports = {
 
-  mode: "development",
-  devtool: "inline-source-map",
+  mode: process.env.NODE_ENV,
+  devtool: PRODUCTION ? false : "inline-source-map",
 
   entry: {
     app: "./app.js"
