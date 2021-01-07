@@ -8,7 +8,7 @@
 </div>
 
 >See also the [Playground](https://github.com/jfactory-es/jfactory/blob/master/docs/playground/README.md) 
-> if your are looking for immediate testing (using an umd package loaded from a script tag)
+> if your are looking for immediate testing
 
 <!--
 This small component demonstrates how to automatically stop and remove all views, queries, promise chains, timers, css and dom, in a single command, using [jFactory](https://github.com/jfactory-es/jfactory).
