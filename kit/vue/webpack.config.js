@@ -12,6 +12,10 @@ module.exports = {
     app: "./app.js"
   },
 
+  output: {
+    path: __dirname + '/dist',
+  },
+
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
