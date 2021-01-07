@@ -1,3 +1,5 @@
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
 module.exports = {
 
   mode: "development",
@@ -6,6 +8,15 @@ module.exports = {
   entry: {
     app: "./app.jsx"
   },
+
+  plugins: [
+    new HtmlWebpackPlugin({
+      filename: "index.html",
+      template: "./app.html",
+      title: "App",
+      inject: "body"
+    })
+  ],
 
   module: {
     rules: [
@@ -27,7 +38,9 @@ module.exports = {
     host: "localhost",
     port: 8080,
     clientLogLevel: "warn",
-    stats: "errors-only"
+    stats: "errors-only",
+    hot: false,
+    liveReload: true,
+    publicPath: "/"
   }
-
 };

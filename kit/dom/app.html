@@ -3,10 +3,9 @@
 <head>
     <meta charset="utf-8"/>
     <title>jFactory Starter Kit</title>
-    <script src="app.js"></script>
 </head>
 <body>
-    <h1>The Inaccurate Clock Component - Vue</h1>
+    <h1>The Inaccurate Clock Component - DOM Template</h1>
     <p>This small component demonstrates how to automatically stop and remove all views, queries, promise chains, timers, css and dom, in a single command, using <a target="_blank" href="https://github.com/jfactory-es/jfactory">jFactory</a></p>
     <p><a target="_blank" href="https://github.com/jfactory-es/jfactory/blob/master/docs/ref-index.md">Documentation</a></p>
 
@@ -15,6 +14,6 @@
     <button onclick="clock.$disable()">disable</button>
     <button onclick="clock.$uninstall()">uninstall</button>
 
-    <template id="tpl-clock"><div class="clock">{{message}}</div></template>
+    <template id="tpl-clock"><div class="clock"/></template>
 </body>
 </html>

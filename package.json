@@ -3,28 +3,28 @@
   "version": "1.7.4",
   "private": true,
   "//": {
-    "jfactory": "file:../jFactory_1/workspace"
-  },
-  "dependencies": {
-    "jfactory": "^1.7.4",
+    "jfactory": "file:../jFactory_1/workspace",
     "jquery": "^3.5.1",
-    "lodash": "^4.17.20",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "vue": "^2.6.12"
+    "lodash": "^4.17.20"
   },
+  "//dev": {},
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-react": "^7.12.10",
     "babel-loader": "^8.2.2",
+    "html-webpack-plugin": "^5.0.0-beta.4",
+    "jfactory": "^1.7.4",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "vue": "^2.6.12",
     "webpack": "^5.11.1",
     "webpack-dev-server": "^3.11.1"
   },
   "scripts": {
-    "react": "node scripts/wds.js react",
-    "vanilla": "node scripts/wds.js vanilla",
-    "vue": "node scripts/wds.js vue",
-    "webcomp": "node scripts/wds.js webcomp",
-    "class": "node scripts/wds.js class"
+    "dev-dom": "node scripts/wds.js dom",
+    "dev-react": "node scripts/wds.js react",
+    "dev-vue": "node scripts/wds.js vue",
+    "dev-webc": "node scripts/wds.js webc",
+    "dev-demo": "node scripts/wds.js demo"
   }
 }

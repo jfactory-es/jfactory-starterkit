@@ -1,28 +1,42 @@
+<div align="center" markdown="1">
+<img width="140" src="https://jfactory-es.github.io/jfactory/img/jFactory.png">
+
 # jFactory Starter Kit
 
-This small component demonstrates how to automatically stop and remove all views, queries, promise chains, timers, css and dom, in a single command, using [jFactory](https://github.com/jfactory-es/jfactory).
+[![GitHub version](https://img.shields.io/github/package-json/v/jfactory-es/jfactory-starterkit.svg?label=git)](https://github.com/jfactory-es/jfactory-starterkit)
 
-See also [Playground](https://github.com/jfactory-es/jfactory/blob/master/docs/playground/README.md) 
-if your are looking for a starter kit that uses an umd package loaded from a script tag.
+</div>
+
+>See also the [Playground](https://github.com/jfactory-es/jfactory/blob/master/docs/playground/README.md) 
+> if your are looking for immediate testing (using an umd package loaded from a script tag)
+
+<!--
+This small component demonstrates how to automatically stop and remove all views, queries, promise chains, timers, css and dom, in a single command, using [jFactory](https://github.com/jfactory-es/jfactory).
+-->
+
+This starter kit provides small applications preconfigured for react, vuejs, dom template and web components. 
+There is also a demonstration of instantiable jFactory components. 
 
 ## Installation
 
 ```
 git clone https://github.com/jfactory-es/jfactory-starterkit.git
+npm install
 ```
 
-## Run
+## Run the DevServer
 
-This kit includes a [webpack local server](https://webpack.js.org/configuration/dev-server/) to run jFactory effortlessly. 
+>A [Webpack DevServer](https://webpack.js.org/configuration/dev-server/) is included to quickly develop a jFactory application effortlessly.
+The DevServer will reload the page when file changes are detected.
 
-Choose the version you want to run:
+Choose the kit you want to run:
 
 ```
-npm run class
-npm run vanilla
-npm run vue
-npm run react
-npm run webcomp
+npm run dev-dom
+npm run dev-react
+npm run dev-vue
+npm run dev-webc
+npm run dev-demo
 ```
 
 Open in a browser:
