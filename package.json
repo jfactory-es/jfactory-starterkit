@@ -1,11 +1,9 @@
 {
   "name": "jfactory-starter-kit",
-  "version": "1.7.4",
+  "version": "1.7.6",
   "private": true,
   "//": {
-    "jfactory": "file:../jFactory_1/workspace",
-    "jquery": "^3.5.1",
-    "lodash": "^4.17.20"
+    "jfactory": "file:../jFactory_1/workspace"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
@@ -14,11 +12,13 @@
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^7.0.0",
     "html-webpack-plugin": "^5.0.0-beta.4",
-    "jfactory": "^1.7.4",
+    "jfactory": "^1.7.6",
+    "jquery": "^3",
+    "lodash": "^4",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "vue": "^2.6.12",
-    "webpack": "^5.11.1",
+    "webpack": "^5.12.2",
     "webpack-dev-server": "^3.11.1"
   },
   "scripts": {
