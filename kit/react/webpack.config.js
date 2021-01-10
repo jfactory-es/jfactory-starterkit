@@ -16,6 +16,17 @@ module.exports = {
     path: __dirname + '/dist',
   },
 
+  module: {
+    rules: [
+      {
+        test: /\.(js|mjs)$/,
+        // exclude: /node_modules/,
+        enforce: "pre",
+        use: ["source-map-loader"]
+      }
+    ]
+  },
+
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({

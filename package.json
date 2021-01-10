@@ -17,6 +17,7 @@
     "lodash": "^4",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "source-map-loader": "^2.0.0",
     "vue": "^2.6.12",
     "webpack": "^5.12.2",
     "webpack-dev-server": "^3.11.1"
