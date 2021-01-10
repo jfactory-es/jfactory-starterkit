@@ -18,11 +18,21 @@ module.exports = {
 
   module: {
     rules: [
-      {
+      PRODUCTION ? {} : {
         test: /\.(js|mjs)$/,
         // exclude: /node_modules/,
         enforce: "pre",
         use: ["source-map-loader"]
+      },
+      {
+        test: /\.jsx$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ['@babel/react']
+          }
+        }
       }
     ]
   },
@@ -41,21 +51,6 @@ module.exports = {
       ],
     })
   ],
-
-  module: {
-    rules: [
-      {
-        test: /\.jsx$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: ['@babel/react']
-          }
-        }
-      }
-    ]
-  },
 
   // See https://webpack.js.org/configuration/dev-server/
   devServer: {

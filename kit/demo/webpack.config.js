@@ -18,7 +18,7 @@ module.exports = {
 
   module: {
     rules: [
-      {
+      PRODUCTION ? {} : {
         test: /\.(js|mjs)$/,
         // exclude: /node_modules/,
         enforce: "pre",
